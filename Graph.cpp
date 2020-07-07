@@ -25,8 +25,8 @@ class Graph
             else
                 graphDots[x][y]=1;
         }
-        
     }
+    updateConnections();
   }
   //Вывести граф с указанием на строки и столбцы 
   void showGraph()
@@ -62,7 +62,11 @@ class Graph
   //Задать массив точек через другой массив
   void setgraphDots(bool **newGraphDots){
     graphDots = newGraphDots;
+    updateConnections();
   }
+  //======================================
+  
+  //Очистка графа
   void clearGraph()
   {
     for(int x=0;x<size;x++)
@@ -76,6 +80,7 @@ class Graph
     kConnection=0;
   }
  //=============================================================
+  
  //Ручной ввод
   void manualInput()
   {
@@ -93,6 +98,7 @@ class Graph
             graphDots[x][y]=val;
       }  
     }
+    updateConnections();
   }
 //=============================================================
   
@@ -122,6 +128,7 @@ class Graph
             cCount--;
           }
       }
+    updateConnections();
   }
   //==================================================================
   
