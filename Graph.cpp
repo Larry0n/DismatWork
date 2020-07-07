@@ -44,5 +44,17 @@ class Graph
       cout<<endl;
     }
   }
-  //===================================================
+ void exportGraph()
+  {
+    cout << "Exported graph: " << endl;
+    for(int x=0;x<size;x++)
+    {
+        for(int y=0;y<size;y++)
+        {
+            cout<<graphDots[x][y];
+            cout<<",";
+        }
+        cout<<endl;
+    }
+  }
 };       
