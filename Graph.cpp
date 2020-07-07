@@ -57,16 +57,4 @@ class Graph
         cout<<endl;
     }
   }
-  void clearGraph()
-  {
-    for(int x=0;x<size;x++)
-    {
-      for(int y=0;y<size;y++)
-      {
-          graphDots[x][y] = 0;
-      }  
-    }
-    connections=0;
-    kConnection=0;
-  }
 };       
