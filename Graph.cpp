@@ -146,5 +146,45 @@ class Graph
     kConnection = kc;
     connections=connections/2;
   }
+ 
+ //Позволяет получить связи конкретной вершины 
+  bool* getVerticesEdges(int vertics)
+  {
+     return graphDots[vertics];
+  }
+  //Позволяет установить связи для конкретной вершины 
+  void setVerticesEdge(int vertics,bool* vEdge)
+  {
+     graphDots[vertics] = vEdge;
+     updateConnections();
+  }
   
-};       
+  
+  void deleteVertics(int vertics)
+  {
+
+    bool **newGraphDots;
+    newGraphDots = new bool* [size-1]; 
+    for (int i = 0; i < size-1; i++)
+      newGraphDots[i] = new bool [size-1];
+
+    for(int x=0;x<vertics;x++)
+    {
+        for(int y=0;y<vertics;y++)
+        {
+          newGraphDots[x][y]=graphDots[x][y];
+        }
+    }
+    for(int x=vertics;x<size-1;x++)
+    {
+        for(int y=vertics;y<size-1;y++)
+        {
+          newGraphDots[x][y]=graphDots[x+1][y+1];
+        }
+    }
+    size=size-1;
+    setgraphDots(newGraphDots);
+  }
+  
+};        
+     
