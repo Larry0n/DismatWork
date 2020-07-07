@@ -28,4 +28,21 @@ class Graph
         
     }
   }
+  //Вывести граф с указанием на строки и столбцы 
+  void showGraph()
+  {
+    for(int x=0;x<size;x++)
+    {
+      for(int y=0;y<size;y++)
+      {
+          cout<<x;
+          cout<<":";
+          cout<<y;
+          cout<<"=";
+          cout<<graphDots[x][y];
+      }
+      cout<<endl;
+    }
+  }
+  //===================================================
 };       
