@@ -125,5 +125,26 @@ class Graph
   }
   //==================================================================
   
+  void updateConnections()
+  {
+    int kc = size*size;
+    connections=0;
+    for(int x=0;x<size;x++)
+    {
+      int xcon = 0;
+      for(int y=0;y<size;y++)
+      {
+        if(graphDots[x][y])
+        {
+          connections++;
+          xcon++;
+        }
+      }
+      if(xcon<kc)
+        kc=xcon;
+    }
+    kConnection = kc;
+    connections=connections/2;
+  }
   
 };       
