@@ -73,4 +73,25 @@ class Graph
     connections=0;
     kConnection=0;
   }
+ //Ручной ввод
+  void manualInput()
+  {
+    clearGraph();
+    for(int x=0;x<size;x++)
+    {
+      for(int y=0;y<size;y++)
+      {
+        bool val;
+            cout<<x;
+            cout<<":";
+            cout<<y;
+            cout<<"=";
+            cin>>val;
+            graphDots[x][y]=val;
+      }  
+    }
+  }
+
+
+
 };       
