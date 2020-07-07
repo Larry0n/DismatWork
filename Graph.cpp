@@ -57,4 +57,8 @@ class Graph
         cout<<endl;
     }
   }
+  //Задать массив точек через другой массив
+  void setgraphDots(bool **newGraphDots){
+    graphDots = newGraphDots;
+  }
 };       
