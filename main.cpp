@@ -40,9 +40,8 @@ int main() {
         dots[4][4]=0;
 //на случай если будет необходимость показать на статичном графе
   // sd.setgraphDots(dots);
-   
-
-
-
+     sd.exportGraph();
+  
+	cout << "Number of disjoint path: " << sd.kConnection << endl;
 
 }
